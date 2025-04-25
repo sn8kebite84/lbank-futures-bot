@@ -10,7 +10,8 @@ import os
 app = Flask(__name__)
 
 API_KEY = os.getenv("LBANK_API_KEY")
-API_SECRET = os.getenv("LBANK_API_SECRET")
+API_SECRET = os.getenv("LBANK_SECRET_KEY")
+SYMBOL = os.getenv("LBANK_SYMBOL")  # optional, but useful for flexibility
 API_URL = "https://api.lbank.info/v2"
 
 def get_timestamp():
