@@ -1,0 +1,13 @@
+
+services:
+  - type: web
+    name: lbank-futures-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app/main.py
+    envVars:
+      - key: LBANK_API_KEY
+        sync: false
+      - key: LBANK_API_SECRET
+        sync: false
